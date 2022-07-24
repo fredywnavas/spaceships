@@ -1,5 +1,5 @@
 # Spaceships
-    CSE210 FINAL PROJECT.
+CSE210 FINAL PROJECT.
 
 Welcome to the spaceships game, where you can have (playing two at the same time) destroying other spaceships and space objects using an awesome blue lazer!
 
@@ -7,3 +7,7 @@ Welcome to the spaceships game, where you can have (playing two at the same time
 In order to use this game, you need to have installed Python 3.8 or newer.
 You can start the game by running the file spaceships/__main__.py from your navigation folders.
 You can also do it from an IDE such as VS Code, running the same file.
+
+## Authors
+• Fredy Navas
+    fredywnavas@gmail.com
