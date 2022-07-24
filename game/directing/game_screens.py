@@ -473,14 +473,14 @@ class GameOver(arcade.View):
             message = 'PLAYER ONE WINS!! :D'
             time_survived = f"Player two survived for only {self.score:.2f} seconds :("
             arcade.draw_text(message, start_x=start_x, start_y=start_y, font_size= 35, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas')  
-            arcade.draw_text(time_survived, start_x=start_x, start_y=(start_y - 30), font_size= 20, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas') 
+            arcade.draw_text(time_survived, start_x=start_x, start_y=(start_y - 25), font_size= 20, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas') 
             arcade.draw_text(play_again_message, start_x=start_x, start_y=(start_y - 50), font_size= 20, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas') 
             
         elif self.ship_lives == 0:
             message = 'PLAYER TWO WINS!! :D'
             time_survived = f"Player one survived for only {self.score:.2f} seconds :("
             arcade.draw_text(message, start_x=start_x, start_y=start_y, font_size= 35, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas')  
-            arcade.draw_text(time_survived, start_x=start_x, start_y=(start_y - 30), font_size= 20, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas') 
+            arcade.draw_text(time_survived, start_x=start_x, start_y=(start_y - 25), font_size= 20, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas') 
             arcade.draw_text(play_again_message, start_x=start_x, start_y=(start_y - 50), font_size= 20, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas')
              
             
