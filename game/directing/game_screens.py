@@ -461,7 +461,7 @@ class GameOver(arcade.View):
 
     def draw_congratulations(self):
         """
-        Print the message "Congratulations" and show the score(time lapse) 
+        Print the message "Congratulations" and show the score(time_survived) 
         """
         self.background = arcade.load_texture(WIN_IMAGE)
         arcade.draw_lrwh_rectangle_textured(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, self.background)
@@ -470,31 +470,31 @@ class GameOver(arcade.View):
         play_again_message = 'Press "space bar" or "click" to play again.'
         
         if self.ship1_lives == 0:
-            message = 'PLAYER ONE WINS!!'
-            lapse = f"Player 2 survived for only {self.score:.2f} seconds :("
+            message = 'PLAYER ONE WINS!! :D'
+            time_survived = f"Player two survived for only {self.score:.2f} seconds :("
             arcade.draw_text(message, start_x=start_x, start_y=start_y, font_size= 35, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas')  
-            arcade.draw_text(lapse, start_x=start_x, start_y=(start_y - 25), font_size= 20, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas') 
+            arcade.draw_text(time_survived, start_x=start_x, start_y=(start_y - 30), font_size= 20, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas') 
             arcade.draw_text(play_again_message, start_x=start_x, start_y=(start_y - 50), font_size= 20, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas') 
             
         elif self.ship_lives == 0:
-            message = 'PLAYER TWO WINS!!'
-            lapse = f"Player one survived for only {self.score:.2f} seconds :("
+            message = 'PLAYER TWO WINS!! :D'
+            time_survived = f"Player one survived for only {self.score:.2f} seconds :("
             arcade.draw_text(message, start_x=start_x, start_y=start_y, font_size= 35, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas')  
-            arcade.draw_text(lapse, start_x=start_x, start_y=(start_y - 25), font_size= 20, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas') 
+            arcade.draw_text(time_survived, start_x=start_x, start_y=(start_y - 30), font_size= 20, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas') 
             arcade.draw_text(play_again_message, start_x=start_x, start_y=(start_y - 50), font_size= 20, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas')
              
             
             
     def draw_game_over(self):
         """
-        Print the message "Game over" and show the score(time lapse) 
+        Print the message "Game over" and show the score(time_survived) 
         """
         self.background = arcade.load_texture(GAME_OVER_IMAGE)
         arcade.draw_lrwh_rectangle_textured(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, self.background)
-        lapse = f"Time Lapse: {self.score:.2f}"
+        time_lapse = f"Time Lapse: {self.score:.2f}"
         start_x = CENTER_X
         start_y = CENTER_Y
-        arcade.draw_text(lapse, start_x=start_x, start_y=start_y, font_size= 30, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas')
+        arcade.draw_text(time_lapse, start_x=start_x, start_y=start_y, font_size= 30, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas')
 
 
 
