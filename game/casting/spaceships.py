@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 class Spaceships(FlyingObject, ABC):
     def __init__(self):
         """
-        Base class for asteroids
+        Base class for spaceships, space objects.
         """
         super().__init__()
         self.rotation = 0.00 #spin

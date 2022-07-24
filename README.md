@@ -1,5 +1,5 @@
-# spaceships
-cse210 final project
+# Spaceships
+    CSE210 FINAL PROJECT.
 
 Welcome to the spaceships game, where you can have (playing two at the same time) destroying other spaceships and space objects using an awesome blue lazer!
 
