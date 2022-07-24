@@ -380,10 +380,10 @@ class GameInplay(arcade.View):
         """
         Puts the current score on the screen
         """
-        score_text = f"Time Lapse: {self.score}"
+        score_text = f"Time Lapse: {self.score:.2f}"
         start_x = 10
         start_y = SCREEN_HEIGHT - 20
-        arcade.draw_text(score_text, start_x=start_x, start_y=start_y, font_size=12, color=arcade.color.WHITE_SMOKE, font_name='Consolas')
+        arcade.draw_text(score_text, start_x=start_x, start_y=start_y, font_size=15, color=arcade.color.WHITE_SMOKE, font_name='Consolas')
 
     def draw_ship_life(self):
         """
@@ -437,11 +437,7 @@ class GameOver(arcade.View):
     def on_draw(self):
         """ Draw this view """
         self.draw_congratulations()
-        # arcade.start_render()
-        # if len(self.spaceships) > 0:
-        #     self.draw_game_over()
-        # else:
-        #     self.draw_congratulations()
+      
 
     def on_key_press(self, key: int, modifiers: int):
         """
@@ -472,16 +468,16 @@ class GameOver(arcade.View):
         if self.ship1_lives == 0:
             message = 'PLAYER ONE WINS!! :D'
             time_survived = f"Player two survived for only {self.score:.2f} seconds :("
-            arcade.draw_text(message, start_x=start_x, start_y=start_y, font_size= 35, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas')  
-            arcade.draw_text(time_survived, start_x=start_x, start_y=(start_y - 20), font_size= 20, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas') 
-            arcade.draw_text(play_again_message, start_x=start_x, start_y=(start_y - 50), font_size= 20, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas') 
+            arcade.draw_text(message, start_x=start_x, start_y=start_y, font_size= 45, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas')  
+            arcade.draw_text(time_survived, start_x=start_x, start_y=(start_y - 60), font_size= 20, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas') 
+            arcade.draw_text(play_again_message, start_x=start_x, start_y=(start_y - 100), font_size= 20, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas') 
             
         elif self.ship_lives == 0:
             message = 'PLAYER TWO WINS!! :D'
             time_survived = f"Player one survived for only {self.score:.2f} seconds :("
-            arcade.draw_text(message, start_x=start_x, start_y=start_y, font_size= 35, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas')  
-            arcade.draw_text(time_survived, start_x=start_x, start_y=(start_y - 20), font_size= 20, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas') 
-            arcade.draw_text(play_again_message, start_x=start_x, start_y=(start_y - 50), font_size= 20, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas')
+            arcade.draw_text(message, start_x=start_x, start_y=start_y, font_size= 45, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas')  
+            arcade.draw_text(time_survived, start_x=start_x, start_y=(start_y - 60), font_size= 20, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas') 
+            arcade.draw_text(play_again_message, start_x=start_x, start_y=(start_y - 100), font_size= 20, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas')
              
             
             
@@ -494,7 +490,7 @@ class GameOver(arcade.View):
         time_lapse = f"Time Lapse: {self.score:.2f}"
         start_x = CENTER_X
         start_y = CENTER_Y
-        arcade.draw_text(time_lapse, start_x=start_x, start_y=start_y, font_size= 30, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas')
+        arcade.draw_text(time_lapse, start_x=start_x, start_y=start_y, font_size= 45, color=arcade.color.WHITE, anchor_x="center", font_name='Consolas')
 
 
 
